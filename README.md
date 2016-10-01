@@ -5,3 +5,4 @@ Movie-DB is a online movies database.....
 database.
 Using this application users can register in the web application and then can share comments, rate movies etc.
 Java 1.8 is used with eclipse Mars IDE.
+JSP and Bootstrap is used as the front end technologies.

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation/DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
+<struts>
+
+	<constant name="struts.ui.theme" value="bootstrap"/>
+	<constant name="struts.devMode" value="true" />
+	 
+	<package name="default" extends="struts-default">
+	
+		<action name="login" class="com.login.LoginAction" method="execute">
+			<result name="success">/success.jsp</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+		
+		<action name="logout" class="com.login.LoginAction" method="logout">
+			<result name="success">/index.jsp</result>
+		</action>
+		
+		
+		<action name="updateInfo" class="com.changeInfo.ChangeInfoAction" method="execute">
+			<result name="success">/updateInfoSuccess.jsp</result>
+			<result name="failure">/updateInfoError.jsp</result>
+		</action>
+		
+		
+		<action name="signUp" class="com.signUp.SignUpAction" method="execute">
+			<result name="success">/index.jsp</result>
+			<result name="failure">/database_error.jsp</result>
+		</action>
+		
+		
+		<action name="addMovie" class="com.addMovie.AddMovieAction" method="execute">
+			<result name="success">/movieAdded.jsp</result>
+			<result name="failure">/movieAddError.jsp</result>
+		</action>
+		
+				
+		
+		
+	</package>
+</struts>
